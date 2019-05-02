@@ -11,6 +11,7 @@ export class QuoteComponent implements OnInit {
   // public date: Date, public upVote: number, public downVote: number
   quotes=[
     new Quote('Money is Power','Unknown','Maggie',new Date(),0,0),
+    new Quote('Akili ni nywele', 'Mhenga', 'Peter', new Date(), 0, 0),
   ];
 
   toggleDetails(index){
