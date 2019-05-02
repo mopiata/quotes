@@ -3,7 +3,7 @@
   <div *ngFor='let quote of quotes'>
     <h5 class="quotedisplay"> {{quote.quoteBody}} <small> <span class="showdetails">Show Details</span></small>
 </h5>
-    <small> {{quote.date}} </small>
+    <small> {{quote.date | timeAgo}} seconds ago</small>
     <app-quote-details [quote]='quote'></app-quote-details>
   </div>
 </div>
