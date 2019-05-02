@@ -13,6 +13,11 @@ export class QuoteComponent implements OnInit {
     new Quote('Money is Power','Unknown','Maggie',new Date(),0,0),
   ];
 
+  toggleDetails(index){
+    this.quotes[index].showDetails = !this.quotes[index].showDetails;
+
+    // if (this.quotes[index].showDetails)
+  }
   constructor() { }
 
   ngOnInit() {
