@@ -11,8 +11,8 @@ export class QuoteDetailsComponent implements OnInit {
   @Input() quote:Quote;
   @Output() isObsolete = new EventEmitter<boolean>();
 
-  quoteDelete(deleteQuote:boolean){
-    this.isObsolete.emit(deleteQuote);
+  quoteDelete(deleteQuoteValue:boolean){
+    this.isObsolete.emit(deleteQuoteValue);
   }
   
   constructor() { }
