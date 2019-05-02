@@ -1,0 +1,9 @@
+<h3>Vote for Quotes</h3>
+<div class="container">
+  <div *ngFor='let quote of quotes'>
+    <h5 class="quotedisplay"> {{quote.quoteBody}} <small> <span class="showdetails">Show Details</span></small>
+</h5>
+    <small> {{quote.date}} </small>
+    <app-quote-details [quote]='quote'></app-quote-details>
+  </div>
+</div>
