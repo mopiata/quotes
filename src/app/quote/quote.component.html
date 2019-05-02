@@ -1,9 +1,12 @@
-<h3>Vote for Quotes</h3>
 <div class="container">
+  <h3>Vote for Quotes</h3>
+  <hr>
+  <hr>
   <div *ngFor='let quote of quotes; let i=index'>
-    <h5 class="quotedisplay"> {{quote.quoteBody}} <small> <span class="showdetails" (click)="toggleDetails(i)">Details</span></small>
-</h5>
+    <h5 class="quotedisplay"> {{quote.quoteBody}} <small> <span class="showdetails" 
+      (click)="toggleDetails(i)">Details</span></small></h5>
     <small> {{quote.date | timeAgo}} </small>
     <app-quote-details *ngIf="quote.showDetails" [quote]='quote'></app-quote-details>
+    <hr>
   </div>
 </div>
