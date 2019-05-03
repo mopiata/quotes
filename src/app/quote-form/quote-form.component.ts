@@ -9,7 +9,9 @@ import { Quote } from "../quote";
 export class QuoteFormComponent implements OnInit {
 
   quotes:Quote[];
-  
+
+  newQuote = new Quote("","","",new Date(),0,0);
+
   constructor() { }
 
   ngOnInit() {
