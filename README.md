@@ -1,27 +1,45 @@
-# QuotesIp
+# _Quotes Meter_
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+#### By Margaret Mutungi
 
-## Development server
+## Description
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+This web application allows a user to submit a quote. The quote can be up-voted or downvoted
 
-## Code scaffolding
+## Specs
+| Behavior        | Input           | Outcome  |
+| ------------- |:-------------:| -----:|
+| Player 1 inputs name and Player 2 inputs name, and clicks start button | Player 1: Olivia / Player 2: Matt / Click START | Goes to game console |
+| Player 1 clicks ROLL button | Click ROLL button | Number from 1-6 is generated
+| If Player 1 rolls any number, that roll score is displayed to the player | Roll = 2 | display 2 |
+| If Player 1 rolls any number other than 1, that roll is added to round rond score and vice versa | Roll = 2 | Round total = 2 |
+| If Player 1 rolls a 1, no score is added and round for Player 1 turn ends, they're updated and vice versa | Roll = 1 | Round total = 0 / Player 2 begins |
+| If Player 1 holds his score, his round total is added to the total score | roll 2-3-4 / hold  | Score = Score + 9 |
+| When a player's total score reaches 100 or more, game ends and winner is declared and congratulated | Player total score = 100 | Congratulations to player |
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## Setup/Installation Requirements
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+* Follow the link for the live site: https://mopiata.github.io/pig-dice/
 
-## Running unit tests
+OR 
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+* Clone this repository
+* Launch the index.html file on your browser
 
-## Running end-to-end tests
+## Technologies Used
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+* _HTML_
+* _CSS_
+* _Bootstrap_
+* _JavaScript_
+* _jQuery_
 
-## Further help
+### Contributors
+_Samuel Ngigi (My instructor)_
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### License
+
+*This software is licensed under the MIT license.*
+
+Copyright (c) 2019 **_Margaret Mutungi_**

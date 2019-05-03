@@ -6,11 +6,12 @@
   <hr>
   <div *ngFor='let quote of quotes; let i=index'>
     <hr>
-    <h5 class="quotedisplay"> {{quote.quoteBody}} <small> <span class="showdetails" 
+    <h5 class="quotedisplay" appHighlightbest> {{quote.quoteBody}} <small> <span class="showdetails" 
       (click)="toggleDetails(i)">Details</span></small></h5>
     <small> {{quote.date | timeAgo}} </small>
     <app-quote-details *ngIf="quote.showDetails" [quote]='quote' 
-      (isObsolete) = 'deleteQuote($event,i)' (isLiked)='quoteLiked($event,i)' (isDisliked)='quoteDisliked($event,i)'></app-quote-details>
+      (isObsolete) = 'deleteQuote($event,i)' (isLiked)='quoteLiked($event,i)' 
+      (isDisliked)='quoteDisliked($event,i)'></app-quote-details>
     <hr>
   </div>
 </div>

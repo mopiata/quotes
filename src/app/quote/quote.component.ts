@@ -13,6 +13,12 @@ export class QuoteComponent implements OnInit {
     new Quote('Akili ni nywele', 'Mhenga', 'Peter', new Date(), 0, 0),
   ];
 
+  // if(){
+  //   val=true;
+  // } else{
+  //   val=false;
+  // }
+
   toggleDetails(index){
     this.quotes[index].showDetails = !this.quotes[index].showDetails;
   }
