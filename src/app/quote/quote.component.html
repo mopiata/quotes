@@ -4,9 +4,9 @@
   <h3>Vote for Quotes</h3>
   <hr>
   <hr>
-  <div *ngFor='let quote of quotes; let i=index'>
+  <div *ngFor='let quote of quotes; let i=index' [appHighlightbest]='quotes'>
     <hr>
-    <h5 class="quotedisplay" appHighlightbest> {{quote.quoteBody}} <small> <span class="showdetails" 
+    <h5 class="quotedisplay"> {{quote.quoteBody}} <small> <span class="showdetails" 
       (click)="toggleDetails(i)">Details</span></small></h5>
     <small> {{quote.date | timeAgo}} </small>
     <app-quote-details *ngIf="quote.showDetails" [quote]='quote' 

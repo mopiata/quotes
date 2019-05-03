@@ -1,4 +1,5 @@
 import { Directive, ElementRef, Input } from '@angular/core';
+import { Quote } from './quote';
 
 @Directive({
   selector: '[appHighlightbest]'
@@ -7,7 +8,9 @@ export class HighlightbestDirective {
 
   constructor(private elem:ElementRef) { }
 
-  // @Input() myHighlight: boolean;
+  @Input('appHighlightbest') quotes: Quote[];
+
+
 
   // ngOnInit() {
   //   console.log(this.myHighlight)
