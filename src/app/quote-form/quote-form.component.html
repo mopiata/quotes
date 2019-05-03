@@ -1,5 +1,5 @@
 <div class="container">
-  <form class="myform" #quotesForm="ngForm">
+  <form class="myform" #quotesForm="ngForm" (ngSubmit)="addQuote()">
     <div class="form-group">
       <label for="name">Name</label>
       <input required #submitter="ngModel" [class.is-invalid]="submitter.invalid && submitter.touched" type="text" [(ngModel)]="newQuote.submitter" class="form-control" id="name" name="name"
@@ -18,6 +18,6 @@
       <small [class.d-none]="author.valid || author.untouched" class="text-danger">Author is required. Indicate if unknown.</small>    
     </div>
     
-    <button type="submit" class="btn btn-primary">Submit Quote</button>
+    <button [disabled]="quotesForm.form.invalid" type="submit" class="btn btn-primary">Submit Quote</button>
   </form>
 </div>
