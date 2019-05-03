@@ -10,9 +10,20 @@ export class QuoteDetailsComponent implements OnInit {
 
   @Input() quote:Quote;
   @Output() isObsolete = new EventEmitter<boolean>();
+  @Output() isLiked = new EventEmitter<boolean>();
+  @Output() isDisliked = new EventEmitter<boolean>();
+
 
   quoteDelete(deleteQuoteValue:boolean){
     this.isObsolete.emit(deleteQuoteValue);
+  }
+
+  likeQuote(likeQuote:boolean){
+    this.isLiked.emit(likeQuote);
+  }
+
+  dislikeQuote(dislikeQuote:boolean){
+    this.isDisliked.emit(dislikeQuote);
   }
   
   constructor() { }

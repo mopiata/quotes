@@ -31,6 +31,14 @@ export class QuoteComponent implements OnInit {
     this.quotes.push(quote);
   }
 
+  quoteLiked(isLiked, index){
+    this.quotes[index].upVote = this.quotes[index].upVote+1;
+  }
+
+  quoteDisliked(isDisliked,index){
+    this.quotes[index].downVote = this.quotes[index].downVote + 1;
+  }
+
   constructor() { }
 
   ngOnInit() {
