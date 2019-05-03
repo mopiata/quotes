@@ -2,17 +2,20 @@
   <form class="myform" #quotesForm="ngForm">
     <div class="form-group">
       <label for="name">Name</label>
-      <input type="text" [(ngModel)]="newQuote.submitter" class="form-control" id="name" name="name"
+      <input required #submitter="ngModel" [class.is-invalid]="submitter.invalid && submitter.touched" type="text" [(ngModel)]="newQuote.submitter" class="form-control" id="name" name="name"
         placeholder="Enter Your Name">
+      <small [class.d-none]="submitter.valid || submitter.untouched" class="text-danger">Your name is required.</small>    
     </div>
     <div class="form-group">
       <label for="quote">Quote</label>
-      <textarea rows="3" [(ngModel)]="newQuote.quoteBody" class="form-control" id="quote" name="quote" placeholder="Enter the most insprational quote"></textarea>
+      <textarea required #quoteBody="ngModel" [class.is-invalid]="quoteBody.invalid && quoteBody.touched" rows="3" [(ngModel)]="newQuote.quoteBody" class="form-control" id="quote" name="quote" placeholder="Enter the most insprational quote"></textarea>
+      <small [class.d-none]="quoteBody.valid || quoteBody.untouched" class="text-danger">A quote is required.</small>
     </div>
 
     <div class="form-group">
       <label for="name">Author</label>
-      <input type="text" [(ngModel)]="newQuote.author" class="form-control" id="author" name="author" placeholder="Who said this?">
+      <input type="text" required #author="ngModel" [class.is-invalid]="author.invalid && author.touched" [(ngModel)]="newQuote.author" class="form-control" id="author" name="author" placeholder="Who said this?">
+      <small [class.d-none]="author.valid || author.untouched" class="text-danger">Author is required. Indicate if unknown.</small>    
     </div>
     
     <button type="submit" class="btn btn-primary">Submit Quote</button>
