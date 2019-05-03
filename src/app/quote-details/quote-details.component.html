@@ -1,7 +1,7 @@
 <br><br>
-<p> Author: {{quote.author}} <br> Submitted by: {{quote.submitter}} </p>
-<small> <span (click)='likeQuote(true)'>Like</span> &nbsp;&nbsp; </small>
-<small> <span (click)='dislikeQuote(true)'>Dislike</span> </small>
+<p> <strong>Author:</strong> {{quote.author}} <br> <strong>Submitted by:</strong> {{quote.submitter}} </p>
+<small> <span class="btn btn-success" (click)='likeQuote(true)'>Like</span> &nbsp;&nbsp; </small>
+<small> <span class="btn btn-danger"  (click)='dislikeQuote(true)'>Dislike</span> </small>
 <br>
-<small> {{quote.upVote}} Likes &nbsp; {{quote.downVote}} Dislikes <span class="delete text-danger" (click) = 'quoteDelete(true)'>Delete Quote</span></small>
+<small><strong> {{quote.upVote}} Likes &nbsp; {{quote.downVote}} Dislikes </strong><span class="delete text-danger" (click) = 'quoteDelete(true)'>Delete Quote</span></small>
 
