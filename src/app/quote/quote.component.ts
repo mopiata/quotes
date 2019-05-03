@@ -16,7 +16,6 @@ export class QuoteComponent implements OnInit {
 
   toggleDetails(index){
     this.quotes[index].showDetails = !this.quotes[index].showDetails;
-    // if (this.quotes[index].showDetails)
   }
 
   deleteQuote(isObsolete, index){
