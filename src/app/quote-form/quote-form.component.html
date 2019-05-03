@@ -1,5 +1,5 @@
 <div class="container">
-  <form class="myform" #quotesForm="ngForm" (ngSubmit)="submitQuote()">
+  <form class="myform" #quotesForm="ngForm" (ngSubmit)='submitQuote()'>
     <div class="form-group">
       <label for="name">Name</label>
       <input required #submitter="ngModel" [class.is-invalid]="submitter.invalid && submitter.touched" type="text" [(ngModel)]="newQuote.submitter" class="form-control" id="name" name="name"
