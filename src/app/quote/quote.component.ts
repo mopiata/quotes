@@ -9,9 +9,9 @@ import { Quote } from "../quote";
 export class QuoteComponent implements OnInit {
    
   quotes=[
-    new Quote('Money is Power','Unknown','Maggie',new Date(),0,0),
-    new Quote('Akili ni nywele', 'Mhenga', 'Peter', new Date(), 0, 0),
-  ];
+    new Quote('Money is Power','Unknown','Maggie',new Date(),2,0),
+    new Quote('Akili ni nywele', 'Mhenga', 'Peter', new Date(), 3, 0),
+  ].sort((a, b) => { return b.upVote - a.upVote });
 
   // if(){
   //   val=true;
@@ -48,6 +48,8 @@ export class QuoteComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.quotes.sort((a, b) => { return b.upVote - a.upVote });
+    console.log(this.quotes);
   }
 
 }

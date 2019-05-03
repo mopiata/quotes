@@ -16,7 +16,7 @@ A user is also able to delete a quote and they are asked to confirm if they want
 
 ## Setup/Installation Requirements
 
-* Follow the link for the live site: https://mopiata.github.io//
+* Follow the link for the live site: https://mopiata.github.io/quotes/
 
 OR 
 
