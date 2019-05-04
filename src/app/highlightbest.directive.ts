@@ -21,17 +21,4 @@ export class HighlightbestDirective {
   ngOnInit(){
     this.highlight();
   }
-
-  // ngOnInit() {
-  //   console.log(this.myHighlight)
-  //   if (this.myHighlight) {
-  //     console.log('highlight');
-  //     this.elem.nativeElement.style.backgroundColor = 'aliceblue';    
-  //   }
-  // }
-
-  // private highlight(isHighest){
-  //   this.elem.nativeElement.style.backgroundColor = 'aliceblue';
-  // }
-
 }

@@ -13,3 +13,7 @@
 .displaydiv{
   padding:20px;
 }
+
+.highlight {
+  background-color: lightgreen;
+}

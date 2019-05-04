@@ -8,10 +8,7 @@ import { Quote } from "../quote";
 })
 export class QuoteComponent implements OnInit {
    
-  quotes=[
-    new Quote('Money is Power','Unknown','Maggie',new Date(),2,0),
-    new Quote('Akili ni nywele', 'Mhenga', 'Peter', new Date(), 3, 0),
-  ];
+  quotes=[ ];
 
   // if(){
   //   val=true;
