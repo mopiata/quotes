@@ -4,11 +4,18 @@
   <h3>Vote for Quotes</h3>
   <hr>
   <hr>
-  <div class="displaydiv" *ngFor='let quote of quotes; let i=index' [appHighlightbest]='quotes'>
+  <div class="displaydiv" *ngFor='let quote of quotes; let i=index'>
     <hr>
-    <h5 class="quotedisplay"> {{quote.quoteBody}} <small> <span class="showdetails" 
-      (click)="toggleDetails(i)">Details</span></small></h5>
-    <small> {{quote.date | timeAgo}} </small>
+    <div appHighlightbest *ngIf="highest(i) && quote.upVote>0">
+      <h5 class="quotedisplay">" {{quote.quoteBody}} " <small> <span class="showdetails" 
+        (click)="toggleDetails(i)">Details</span></small></h5>
+      <small> {{quote.date | timeAgo}} </small>
+    </div>
+    <div *ngIf="!highest(i) || quote.upVote===0">
+      <h5 class="quotedisplay">" {{quote.quoteBody}} " <small> <span class="showdetails"
+            (click)="toggleDetails(i)">Details</span></small></h5>
+      <small> {{quote.date | timeAgo}} </small>
+    </div>
     <app-quote-details *ngIf="quote.showDetails" [quote]='quote' 
       (isObsolete) = 'deleteQuote($event,i)' (isLiked)='quoteLiked($event,i)' 
       (isDisliked)='quoteDisliked($event,i)'></app-quote-details>

@@ -10,12 +10,8 @@ export class HighlightbestDirective {
 
   @Input('appHighlightbest') quotes: Quote[];
 
-  highlight(){
-    if(this.quotes[0]){
+  highlight(){   
       this.elem.nativeElement.style.backgroundColor = 'aliceblue';
-    }else{
-      this.elem.nativeElement.style.backgroundColor = 'transparent';
-    }
   }
 
   ngOnInit(){

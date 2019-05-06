@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Quote } from "../quote";
+import { QuoteDetailsComponent } from '../quote-details/quote-details.component';
 
 @Component({
   selector: 'app-quote',
@@ -10,10 +11,29 @@ export class QuoteComponent implements OnInit {
    
   quotes=[ ];
 
-  // if(){
-  //   val=true;
-  // } else{
-  //   val=false;
+  highest(index) {
+    const hold = this.quotes[index].upVote;
+
+    if (this.quotes.length > 0) {
+      const votes = [];
+
+      this.quotes.forEach(quote => votes.push(quote.upVote));
+      if (hold === Math.max(...votes)) {
+        return true;
+      }
+    }
+  }
+  // highestVote(index){
+  //   let votes=[];
+    
+  //   this.quotes.forEach(function(quote){
+  //     votes.push(quote.upVote);
+  //     if(this.quote.upVote===Math.max(...votes)){
+  //       return true;
+  //     }else{
+  //       return false;
+  //     }
+  //   });
   // }
 
   toggleDetails(index){
